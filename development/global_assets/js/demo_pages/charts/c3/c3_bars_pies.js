@@ -26,12 +26,14 @@ var С3BarsPies = function() {
 
         // Define charts elements
         var pie_chart_element = document.getElementById('c3-pie-chart');
+        var pie_chart_element2 = document.getElementById('c3-pie-chart2');
+        var pie_chart_element3 = document.getElementById('c3-pie-chart3');
+        var pie_chart_element4 = document.getElementById('c3-pie-chart4');
         var donut_chart_element = document.getElementById('c3-donut-chart');
         var bar_chart_element = document.getElementById('c3-bar-chart');
         var bar_stacked_chart_element = document.getElementById('c3-bar-stacked-chart');
         var combined_chart_element = document.getElementById('c3-combined-chart');
         var scatter_chart_element = document.getElementById('c3-scatter-chart');
-
 
         // Pie chart
         if(pie_chart_element) {
@@ -39,41 +41,98 @@ var С3BarsPies = function() {
             // Generate chart
             var pie_chart = c3.generate({
                 bindto: pie_chart_element,
-                size: { width: 350 },
+                size: { width: 150 },
                 color: {
                     pattern: ['#3F51B5', '#FF9800', '#4CAF50', '#00BCD4', '#F44336']
                 },
                 data: {
                     columns: [
-                        ['data1', 30],
+                        ['data1', 3],
                         ['data2', 120],
                     ],
                     type : 'pie'
                 }
             });
 
-            // Change data
-            setTimeout(function () {
-                pie_chart.load({
-                    columns: [
-                        ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
-                        ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
-                        ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
-                    ]
-                });
-            }, 4000);
-            setTimeout(function () {
-                pie_chart.unload({
-                    ids: 'data1'
-                });
-                pie_chart.unload({
-                    ids: 'data2'
-                });
-            }, 8000);
 
             // Resize chart on sidebar width change
             $('.sidebar-control').on('click', function() {
                 pie_chart.resize();
+            });
+        }
+
+        if(pie_chart_element2) {
+
+            // Generate chart
+            var pie_chart2 = c3.generate({
+                bindto: pie_chart_element2,
+                size: { width: 150 },
+                color: {
+                    pattern: ['#3F51B5', '#FF9800', '#4CAF50', '#00BCD4', '#F44336']
+                },
+                data: {
+                    columns: [
+                        ['data1', 3],
+                        ['data2', 120],
+                    ],
+                    type : 'pie'
+                }
+            });
+
+
+            // Resize chart on sidebar width change
+            $('.sidebar-control').on('click', function() {
+                pie_chart2.resize();
+            });
+        }
+
+        if(pie_chart_element3) {
+
+            // Generate chart
+            var pie_chart3 = c3.generate({
+                bindto: pie_chart_element3,
+                size: { width: 150 },
+                color: {
+                    pattern: ['#3F51B5', '#FF9800', '#4CAF50', '#00BCD4', '#F44336']
+                },
+                data: {
+                    columns: [
+                        ['data1', 3],
+                        ['data2', 120],
+                    ],
+                    type : 'pie'
+                }
+            });
+
+
+            // Resize chart on sidebar width change
+            $('.sidebar-control').on('click', function() {
+                pie_chart3.resize();
+            });
+        }
+
+        if(pie_chart_element4) {
+
+            // Generate chart
+            var pie_chart4 = c3.generate({
+                bindto: pie_chart_element4,
+                size: { width: 150 },
+                color: {
+                    pattern: ['#3F51B5', '#FF9800', '#4CAF50', '#00BCD4', '#F44336']
+                },
+                data: {
+                    columns: [
+                        ['data1', 3],
+                        ['data2', 120],
+                    ],
+                    type : 'pie'
+                }
+            });
+
+
+            // Resize chart on sidebar width change
+            $('.sidebar-control').on('click', function() {
+                pie_chart4.resize();
             });
         }
 

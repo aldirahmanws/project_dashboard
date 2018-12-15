@@ -31,7 +31,20 @@
 	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	
+
+	<script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+
+
+	<script src="global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	<script src="global_assets/js/demo_pages/charts/echarts/lines.js"></script>
+
+	<script src="global_assets/js/plugins/visualization/c3/c3.min.js"></script>
+	<script src="global_assets/js/demo_pages/charts/c3/c3_bars_pies.js"></script>
+
+	<script src="assets/js/linechart/Chart.bundle.js"></script>
+	<script src="assets/js/linechart/utils.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -505,20 +518,40 @@
 						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Dashboard</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
-
-					<div class="header-elements d-none">
-						<label>Pilih outlet :</label>
-						<select id="pilihanoutlet">
-							<option>Semua Otlet</option>
-							<option>Talkabot</option>
-							<option>Aps Tutorial</option>
-							<option>APS Bazaar Demo</option>
-						</select>
-					</div>
 				</div>
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
-					<div class="d-flex">
+					<table class="table">
+						<tr>	
+							<td>Dashboard</td>
+							<td colspan="4"></td>
+							<td colspan="2">
+								<select id="pilihanoutlet" class="form-control">
+									<option>Semua Otlet</option>
+									<option>Talkabot</option>
+									<option>Aps Tutorial</option>
+									<option>APS Bazaar Demo</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><button class="">Hari ini</button></td>
+							<td><button class="">Kemarin</button></td>
+							<td><button class="">Minggu ini</button></td>
+							<td><button class="">Minggu kemarin</button></td>
+							<td colspan="3"><center>Bulan ini</center></td>
+						</tr>
+						<tr>
+							<td><button class="">Bulan kemarin</button></td>
+							<td><button class="">Tahun ini</button></td>
+							<td><button class="">Tahun kemarin</button></td>
+							<td><button class="">Pilih periode</button></td>
+							<td width="1%"><input class="form-control" type="date"></td>
+							<td>sd</td>
+							<td><input class="form-control" type="date"></td>
+						</tr>
+					</table>
+					<!-- <div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
 							<span class="breadcrumb-item active">Dashboard</span>
@@ -529,27 +562,20 @@
 
 					<div class="header-elements d-none">
 						<div class="breadcrumb justify-content-center">
-							<a href="#" class="breadcrumb-elements-item">
-								<i class="icon-comment-discussion mr-2"></i>
-								Support
-							</a>
-
 							<div class="breadcrumb-elements-item dropdown p-0">
-								<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
-									<i class="icon-gear mr-2"></i>
-									Settings
-								</a>
-
-								<div class="dropdown-menu dropdown-menu-right">
-									<a href="#" class="dropdown-item"><i class="icon-user-lock"></i> Account security</a>
-									<a href="#" class="dropdown-item"><i class="icon-statistics"></i> Analytics</a>
-									<a href="#" class="dropdown-item"><i class="icon-accessibility"></i> Accessibility</a>
-									<div class="dropdown-divider"></div>
-									<a href="#" class="dropdown-item"><i class="icon-gear"></i> All settings</a>
+								<div  class="breadcrumb-elements-item">
+									<form>
+										<select id="pilihanoutlet" class="form-control form-control-select2" data-fouc>
+											<option>Semua Otlet</option>
+											<option>Talkabot</option>
+											<option>Aps Tutorial</option>
+											<option>APS Bazaar Demo</option>
+										</select>
+									</form>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<!-- /page header -->
@@ -560,6 +586,305 @@
 
 				<!-- Main charts -->
 				<div class="row">
+					
+					<div class="col-xl-12">
+						<div class="row">
+						<div class="col-sm-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center  mb-2">
+										<img src="global_assets/images/icon retur penjualan.svg" style="width: 75px" class="mr-2">
+										<div>
+											<center>
+											<div class="font-weight-semibold">Retur Penjualan</div>
+											<span class="text-muted">2,349 avg</span>
+											</center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center  mb-2">
+										<img src="global_assets/images/icon penjualan bersih.svg" style="width: 75px" class="mr-3">
+										<div>
+											<center>
+											<div class="font-weight-semibold">Penjualan bersih</div>
+											<span class="text-muted">2,349 avg</span>
+											</center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center  mb-2">
+										<img src="global_assets/images/icon penjualan.svg" style="width: 75px" class="mr-5">
+										<div>
+											<center>
+											<div class="font-weight-semibold">Penjualan</div>
+											<span class="text-muted">2,349 avg</span>
+											</center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+
+					<div class="col-xl-12">
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Basic pie chart</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<div class="chart-container text-center">
+										<div class="d-inline-block" id="c3-pie-chart"></div>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Basic pie chart</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<div class="chart-container text-center">
+										<div class="d-inline-block" id="c3-pie-chart2"></div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-12">
+
+						<!-- Traffic sources -->
+							<!-- <div style="width:75%;">
+								<canvas id="canvas"></canvas>
+							</div> -->
+
+							<!-- Show values -->
+							<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Show values</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<div class="chart-container">
+										<div class="chart has-fixed-height" id="line_values"></div>
+									</div>
+								</div>
+							</div>
+							<!-- /show values -->
+
+						<!-- /traffic sources -->
+
+					</div>
+
+					<div class="col-xl-12">
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Basic pie chart</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<div class="chart-container text-center">
+										<div class="d-inline-block" id="c3-pie-chart3"></div>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Basic pie chart</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+								
+								<div class="card-body">
+									<div class="chart-container text-center">
+										<div class="d-inline-block" id="c3-pie-chart4"></div>
+									</div>
+								</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-12">
+						<div class="row">
+						<div class="col-xl-4">
+						<div class="card">
+							<div class="table-responsive" style="overflow-x: hidden">
+								<table class="table">
+									<thead>
+										<tr class="bg-blue">
+											<th colspan="4">TOP 3 OMSET</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Eugene</td>
+											<td>Kopyov</td>
+											<td>@Kopyov</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Victoria</td>
+											<td>Baker</td>
+											<td>@Vicky</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>James</td>
+											<td>Alexander</td>
+											<td>@Alex</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Franklin</td>
+											<td>Morrison</td>
+											<td>@Frank</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+
+						<div class="col-xl-4">
+						<div class="card">
+
+							<div class="table-responsive" style="overflow-x: hidden">
+								<table class="table">
+									<thead>
+										<tr class="bg-blue">
+											<th colspan="4">TOP 3 LABA</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Eugene</td>
+											<td>Kopyov</td>
+											<td>@Kopyov</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Victoria</td>
+											<td>Baker</td>
+											<td>@Vicky</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>James</td>
+											<td>Alexander</td>
+											<td>@Alex</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Franklin</td>
+											<td>Morrison</td>
+											<td>@Frank</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+
+						<div class="col-xl-4" >
+						<div class="card">
+
+							<div class="table-responsive" style="overflow-x: hidden">
+								<table class="table">
+									<thead>
+										<tr class="bg-blue">
+											<th colspan="4">TOP 3 KATEGORI</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Eugene</td>
+											<td>Kopyov</td>
+											<td>@Kopyov</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Victoria</td>
+											<td>Baker</td>
+											<td>@Vicky</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>James</td>
+											<td>Alexander</td>
+											<td>@Alex</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Franklin</td>
+											<td>Morrison</td>
+											<td>@Frank</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+						</div>
+					</div>
+
 					<div class="col-xl-7">
 
 						<!-- Traffic sources -->
@@ -2282,3 +2607,13 @@
 
 </body>
 </html>
+
+<!-- Script -->
+
+<?php 
+
+	include('assets/js/linechart/line-chart.js');
+ 
+ ?>
+
+<!-- Script -->
