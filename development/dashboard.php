@@ -593,6 +593,21 @@
 							<div class="card">
 								<div class="card-body">
 									<div class="d-flex align-items-center  mb-2">
+										<img src="global_assets/images/icon penjualan.svg" style="width: 75px" class="mr-5">
+										<div>
+											<center>
+											<div class="font-weight-semibold">Penjualan</div>
+											<span class="text-muted">2,349 avg</span>
+											</center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center  mb-2">
 										<img src="global_assets/images/icon retur penjualan.svg" style="width: 75px" class="mr-2">
 										<div>
 											<center>
@@ -612,21 +627,6 @@
 										<div>
 											<center>
 											<div class="font-weight-semibold">Penjualan bersih</div>
-											<span class="text-muted">2,349 avg</span>
-											</center>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex align-items-center  mb-2">
-										<img src="global_assets/images/icon penjualan.svg" style="width: 75px" class="mr-5">
-										<div>
-											<center>
-											<div class="font-weight-semibold">Penjualan</div>
 											<span class="text-muted">2,349 avg</span>
 											</center>
 										</div>
