@@ -535,17 +535,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td><button class="">Hari ini</button></td>
-							<td><button class="">Kemarin</button></td>
-							<td><button class="">Minggu ini</button></td>
-							<td><button class="">Minggu kemarin</button></td>
+							<td><center><button class="btn btn-primary">Hari ini</button></center></td>
+							<td><center><button class="btn btn-primary">Kemarin</button></center></td>
+							<td><center><button class="btn btn-primary">Minggu ini</button></center></td>
+							<td><center><button class="btn btn-primary">Minggu kemarin</button></center></td>
 							<td colspan="3"><center>Bulan ini</center></td>
 						</tr>
 						<tr>
-							<td><button class="">Bulan kemarin</button></td>
-							<td><button class="">Tahun ini</button></td>
-							<td><button class="">Tahun kemarin</button></td>
-							<td><button class="">Pilih periode</button></td>
+							<td><center><button class="btn btn-primary">Bulan kemarin</button></center></td>
+							<td><center><button class="btn btn-primary">Tahun ini</button></center></td>
+							<td><center><button class="btn btn-primary">Tahun kemarin</button></center></td>
+							<td><center><button class="btn btn-primary">Pilih periode</button></center></td>
 							<td width="1%"><input class="form-control" type="date"></td>
 							<td>sd</td>
 							<td><input class="form-control" type="date"></td>
