@@ -45,6 +45,10 @@
 
 	<script src="assets/js/linechart/Chart.bundle.js"></script>
 	<script src="assets/js/linechart/utils.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -883,6 +887,49 @@
 						</div>
 						</div>
 						</div>
+					</div>
+
+					<div class="col-xl-12">
+
+						<div class="row">
+						<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Show values</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<a class="list-icons-item" data-action="collapse"></a>
+				                		<a class="list-icons-item" data-action="reload"></a>
+				                		<a class="list-icons-item" data-action="remove"></a>
+				                	</div>
+			                	</div>
+							</div>
+
+							<div class="card-body">
+								<div id="container"></div>
+							</div>
+						</div>
+						</div>
+						<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Show values</h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<a class="list-icons-item" data-action="collapse"></a>
+				                		<a class="list-icons-item" data-action="reload"></a>
+				                		<a class="list-icons-item" data-action="remove"></a>
+				                	</div>
+			                	</div>
+							</div>
+
+							<div class="card-body">
+								<div id="container2"></div>
+							</div>
+						</div>
+						</div>
+						</div>
+
 					</div>
 
 					<div class="col-xl-7">
@@ -2613,6 +2660,7 @@
 <?php 
 
 	include('assets/js/linechart/line-chart.js');
+	include('assets/js/bubblechart/bubble-chart.js');
  
  ?>
 
