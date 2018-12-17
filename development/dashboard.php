@@ -51,6 +51,12 @@
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<!-- /theme JS files -->
 
+	<style type="text/css">
+		.borderless td, .borderless th {
+		    border: none;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -525,7 +531,7 @@
 				</div>
 
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
-					<table class="table">
+					<table class="table borderless">
 						<tr>	
 							<td>Dashboard</td>
 							<td colspan="4"></td>
@@ -892,10 +898,35 @@
 					<div class="col-xl-12">
 
 						<div class="row">
-						<div class="col-xl-6">
+						<div class="col-xl-12">
 						<div class="card">
+							<ul class="nav nav-tabs nav-tabs-solid nav-justified bg-indigo-400 border-x-0 border-bottom-0 border-top-indigo-300 mb-0">
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase active" data-toggle="tab">
+										All Spending
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Types of Spending
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Changes
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Department Totals
+									</a>
+								</li>
+							</ul>
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Show values</h5>
+								<h5 class="card-title">Penjualan Produk</h5>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -905,15 +936,52 @@
 			                	</div>
 							</div>
 
-							<div class="card-body">
-								<div id="container"></div>
+							<div class="col-xl-12">
+							<table>
+								<tr>
+									<td class="col-md-6">
+										Contoh ya ini
+									</td>
+									<td>
+										<div class="card-body">
+											<div id="container"></div>
+										</div>
+									</td>
+								</tr>
+							</table>
 							</div>
+
 						</div>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-xl-12">
 						<div class="card">
+							<ul class="nav nav-tabs nav-tabs-solid nav-justified bg-indigo-400 border-x-0 border-bottom-0 border-top-indigo-300 mb-0">
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase active" data-toggle="tab">
+										All Spending
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Types of Spending
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Changes
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link font-size-sm text-uppercase" data-toggle="tab">
+										Department Totals
+									</a>
+								</li>
+							</ul>
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Show values</h5>
+								<h5 class="card-title">Evaluasi Nilai Stok</h5>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -923,9 +991,21 @@
 			                	</div>
 							</div>
 
-							<div class="card-body">
-								<div id="container2"></div>
+							<div class="col-xl-12">
+							<table>
+								<tr>
+									<td class="col-md-6">
+										Contoh ya ini
+									</td>
+									<td>
+										<div class="card-body">
+											<div id="container2"></div>
+										</div>
+									</td>
+								</tr>
+							</table>
 							</div>
+
 						</div>
 						</div>
 						</div>
