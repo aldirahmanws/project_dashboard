@@ -545,17 +545,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td><center><button class="btn btn-primary">Hari ini</button></center></td>
-							<td><center><button class="btn btn-primary">Kemarin</button></center></td>
-							<td><center><button class="btn btn-primary">Minggu ini</button></center></td>
-							<td><center><button class="btn btn-primary">Minggu kemarin</button></center></td>
+							<td><center><button class="" style="width: 120px">Hari ini</button></center></td>
+							<td><center><button class="" style="width: 120px">Kemarin</button></center></td>
+							<td><center><button class="" style="width: 120px">Minggu ini</button></center></td>
+							<td><center><button class="" style="width: 120px">Minggu kemarin</button></center></td>
 							<td colspan="3"><center>Bulan ini</center></td>
 						</tr>
 						<tr>
-							<td><center><button class="btn btn-primary">Bulan kemarin</button></center></td>
-							<td><center><button class="btn btn-primary">Tahun ini</button></center></td>
-							<td><center><button class="btn btn-primary">Tahun kemarin</button></center></td>
-							<td><center><button class="btn btn-primary">Pilih periode</button></center></td>
+							<td><center><button class="" style="width: 120px">Bulan kemarin</button></center></td>
+							<td><center><button class="" style="width: 120px">Tahun ini</button></center></td>
+							<td><center><button class="" style="width: 120px">Tahun kemarin</button></center></td>
+							<td><center><button class="" style="width: 120px">Pilih periode</button></center></td>
 							<td width="1%"><input class="form-control" type="date"></td>
 							<td>sd</td>
 							<td><input class="form-control" type="date"></td>
